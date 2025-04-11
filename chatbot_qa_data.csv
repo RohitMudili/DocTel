@@ -1,0 +1,301 @@
+question_text,intent,response_text
+Is it normal to feel pain on day 5?,pain_mgmt,Standard response for pain mgmt.
+How can I manage my pain?,pain_mgmt,Standard response for pain mgmt.
+What painkillers can I use?,pain_mgmt,Standard response for pain mgmt.
+What painkillers can I use?,pain_mgmt,Standard response for pain mgmt.
+What painkillers can I use?,pain_mgmt,Standard response for pain mgmt.
+How can I manage my pain?,pain_mgmt,Standard response for pain mgmt.
+Is it normal to feel pain on day 5?,pain_mgmt,Standard response for pain mgmt.
+What painkillers can I use?,pain_mgmt,Standard response for pain mgmt.
+Is it normal to feel pain on day 5?,pain_mgmt,Standard response for pain mgmt.
+Is it normal to feel pain on day 5?,pain_mgmt,Standard response for pain mgmt.
+What painkillers can I use?,pain_mgmt,Standard response for pain mgmt.
+Is it normal to feel pain on day 5?,pain_mgmt,Standard response for pain mgmt.
+Is it normal to feel pain on day 5?,pain_mgmt,Standard response for pain mgmt.
+How can I manage my pain?,pain_mgmt,Standard response for pain mgmt.
+Is it normal to feel pain on day 5?,pain_mgmt,Standard response for pain mgmt.
+How can I manage my pain?,pain_mgmt,Standard response for pain mgmt.
+What painkillers can I use?,pain_mgmt,Standard response for pain mgmt.
+What painkillers can I use?,pain_mgmt,Standard response for pain mgmt.
+What painkillers can I use?,pain_mgmt,Standard response for pain mgmt.
+Is it normal to feel pain on day 5?,pain_mgmt,Standard response for pain mgmt.
+Is it normal to feel pain on day 5?,pain_mgmt,Standard response for pain mgmt.
+Is it normal to feel pain on day 5?,pain_mgmt,Standard response for pain mgmt.
+Is it normal to feel pain on day 5?,pain_mgmt,Standard response for pain mgmt.
+What painkillers can I use?,pain_mgmt,Standard response for pain mgmt.
+How can I manage my pain?,pain_mgmt,Standard response for pain mgmt.
+What painkillers can I use?,pain_mgmt,Standard response for pain mgmt.
+Is it normal to feel pain on day 5?,pain_mgmt,Standard response for pain mgmt.
+How can I manage my pain?,pain_mgmt,Standard response for pain mgmt.
+How can I manage my pain?,pain_mgmt,Standard response for pain mgmt.
+How can I manage my pain?,pain_mgmt,Standard response for pain mgmt.
+Is it normal to feel pain on day 5?,pain_mgmt,Standard response for pain mgmt.
+Is it normal to feel pain on day 5?,pain_mgmt,Standard response for pain mgmt.
+Is it normal to feel pain on day 5?,pain_mgmt,Standard response for pain mgmt.
+How can I manage my pain?,pain_mgmt,Standard response for pain mgmt.
+What painkillers can I use?,pain_mgmt,Standard response for pain mgmt.
+What painkillers can I use?,pain_mgmt,Standard response for pain mgmt.
+Is it normal to feel pain on day 5?,pain_mgmt,Standard response for pain mgmt.
+How can I manage my pain?,pain_mgmt,Standard response for pain mgmt.
+Is it normal to feel pain on day 5?,pain_mgmt,Standard response for pain mgmt.
+Is it normal to feel pain on day 5?,pain_mgmt,Standard response for pain mgmt.
+What painkillers can I use?,pain_mgmt,Standard response for pain mgmt.
+What painkillers can I use?,pain_mgmt,Standard response for pain mgmt.
+Is it normal to feel pain on day 5?,pain_mgmt,Standard response for pain mgmt.
+What painkillers can I use?,pain_mgmt,Standard response for pain mgmt.
+Is it normal to feel pain on day 5?,pain_mgmt,Standard response for pain mgmt.
+What painkillers can I use?,pain_mgmt,Standard response for pain mgmt.
+How can I manage my pain?,pain_mgmt,Standard response for pain mgmt.
+How can I manage my pain?,pain_mgmt,Standard response for pain mgmt.
+What painkillers can I use?,pain_mgmt,Standard response for pain mgmt.
+Is it normal to feel pain on day 5?,pain_mgmt,Standard response for pain mgmt.
+Can I shower with my drains?,drain_care,Standard response for drain care.
+When will my drains be removed?,drain_care,Standard response for drain care.
+How do I empty my surgical drain?,drain_care,Standard response for drain care.
+How do I empty my surgical drain?,drain_care,Standard response for drain care.
+Can I shower with my drains?,drain_care,Standard response for drain care.
+Can I shower with my drains?,drain_care,Standard response for drain care.
+How do I empty my surgical drain?,drain_care,Standard response for drain care.
+How do I empty my surgical drain?,drain_care,Standard response for drain care.
+Can I shower with my drains?,drain_care,Standard response for drain care.
+When will my drains be removed?,drain_care,Standard response for drain care.
+When will my drains be removed?,drain_care,Standard response for drain care.
+How do I empty my surgical drain?,drain_care,Standard response for drain care.
+How do I empty my surgical drain?,drain_care,Standard response for drain care.
+Can I shower with my drains?,drain_care,Standard response for drain care.
+Can I shower with my drains?,drain_care,Standard response for drain care.
+How do I empty my surgical drain?,drain_care,Standard response for drain care.
+When will my drains be removed?,drain_care,Standard response for drain care.
+When will my drains be removed?,drain_care,Standard response for drain care.
+Can I shower with my drains?,drain_care,Standard response for drain care.
+How do I empty my surgical drain?,drain_care,Standard response for drain care.
+How do I empty my surgical drain?,drain_care,Standard response for drain care.
+When will my drains be removed?,drain_care,Standard response for drain care.
+When will my drains be removed?,drain_care,Standard response for drain care.
+When will my drains be removed?,drain_care,Standard response for drain care.
+When will my drains be removed?,drain_care,Standard response for drain care.
+How do I empty my surgical drain?,drain_care,Standard response for drain care.
+How do I empty my surgical drain?,drain_care,Standard response for drain care.
+When will my drains be removed?,drain_care,Standard response for drain care.
+Can I shower with my drains?,drain_care,Standard response for drain care.
+Can I shower with my drains?,drain_care,Standard response for drain care.
+How do I empty my surgical drain?,drain_care,Standard response for drain care.
+How do I empty my surgical drain?,drain_care,Standard response for drain care.
+How do I empty my surgical drain?,drain_care,Standard response for drain care.
+Can I shower with my drains?,drain_care,Standard response for drain care.
+How do I empty my surgical drain?,drain_care,Standard response for drain care.
+When will my drains be removed?,drain_care,Standard response for drain care.
+How do I empty my surgical drain?,drain_care,Standard response for drain care.
+When will my drains be removed?,drain_care,Standard response for drain care.
+How do I empty my surgical drain?,drain_care,Standard response for drain care.
+Can I shower with my drains?,drain_care,Standard response for drain care.
+Can I shower with my drains?,drain_care,Standard response for drain care.
+Can I shower with my drains?,drain_care,Standard response for drain care.
+How do I empty my surgical drain?,drain_care,Standard response for drain care.
+How do I empty my surgical drain?,drain_care,Standard response for drain care.
+Can I shower with my drains?,drain_care,Standard response for drain care.
+Can I shower with my drains?,drain_care,Standard response for drain care.
+Can I shower with my drains?,drain_care,Standard response for drain care.
+When will my drains be removed?,drain_care,Standard response for drain care.
+Can I shower with my drains?,drain_care,Standard response for drain care.
+How do I empty my surgical drain?,drain_care,Standard response for drain care.
+When can I raise my arm?,mobility,Standard response for mobility.
+Can I exercise after surgery?,mobility,Standard response for mobility.
+When can I raise my arm?,mobility,Standard response for mobility.
+When can I raise my arm?,mobility,Standard response for mobility.
+Can I exercise after surgery?,mobility,Standard response for mobility.
+When can I raise my arm?,mobility,Standard response for mobility.
+Can I exercise after surgery?,mobility,Standard response for mobility.
+How soon can I walk?,mobility,Standard response for mobility.
+Can I exercise after surgery?,mobility,Standard response for mobility.
+When can I raise my arm?,mobility,Standard response for mobility.
+When can I raise my arm?,mobility,Standard response for mobility.
+How soon can I walk?,mobility,Standard response for mobility.
+Can I exercise after surgery?,mobility,Standard response for mobility.
+How soon can I walk?,mobility,Standard response for mobility.
+How soon can I walk?,mobility,Standard response for mobility.
+How soon can I walk?,mobility,Standard response for mobility.
+Can I exercise after surgery?,mobility,Standard response for mobility.
+How soon can I walk?,mobility,Standard response for mobility.
+Can I exercise after surgery?,mobility,Standard response for mobility.
+When can I raise my arm?,mobility,Standard response for mobility.
+Can I exercise after surgery?,mobility,Standard response for mobility.
+When can I raise my arm?,mobility,Standard response for mobility.
+When can I raise my arm?,mobility,Standard response for mobility.
+Can I exercise after surgery?,mobility,Standard response for mobility.
+When can I raise my arm?,mobility,Standard response for mobility.
+Can I exercise after surgery?,mobility,Standard response for mobility.
+When can I raise my arm?,mobility,Standard response for mobility.
+When can I raise my arm?,mobility,Standard response for mobility.
+How soon can I walk?,mobility,Standard response for mobility.
+Can I exercise after surgery?,mobility,Standard response for mobility.
+How soon can I walk?,mobility,Standard response for mobility.
+When can I raise my arm?,mobility,Standard response for mobility.
+Can I exercise after surgery?,mobility,Standard response for mobility.
+When can I raise my arm?,mobility,Standard response for mobility.
+When can I raise my arm?,mobility,Standard response for mobility.
+When can I raise my arm?,mobility,Standard response for mobility.
+How soon can I walk?,mobility,Standard response for mobility.
+When can I raise my arm?,mobility,Standard response for mobility.
+How soon can I walk?,mobility,Standard response for mobility.
+Can I exercise after surgery?,mobility,Standard response for mobility.
+Can I exercise after surgery?,mobility,Standard response for mobility.
+Can I exercise after surgery?,mobility,Standard response for mobility.
+When can I raise my arm?,mobility,Standard response for mobility.
+Can I exercise after surgery?,mobility,Standard response for mobility.
+How soon can I walk?,mobility,Standard response for mobility.
+How soon can I walk?,mobility,Standard response for mobility.
+When can I raise my arm?,mobility,Standard response for mobility.
+Can I exercise after surgery?,mobility,Standard response for mobility.
+How soon can I walk?,mobility,Standard response for mobility.
+When can I raise my arm?,mobility,Standard response for mobility.
+How should I clean my wound?,wound_care,Standard response for wound care.
+How should I clean my wound?,wound_care,Standard response for wound care.
+How should I clean my wound?,wound_care,Standard response for wound care.
+What do I do if the wound bleeds?,wound_care,Standard response for wound care.
+What do I do if the wound bleeds?,wound_care,Standard response for wound care.
+What do I do if the wound bleeds?,wound_care,Standard response for wound care.
+How should I clean my wound?,wound_care,Standard response for wound care.
+How should I clean my wound?,wound_care,Standard response for wound care.
+What do I do if the wound bleeds?,wound_care,Standard response for wound care.
+How should I clean my wound?,wound_care,Standard response for wound care.
+How should I clean my wound?,wound_care,Standard response for wound care.
+What do I do if the wound bleeds?,wound_care,Standard response for wound care.
+Is redness around the incision normal?,wound_care,Standard response for wound care.
+Is redness around the incision normal?,wound_care,Standard response for wound care.
+What do I do if the wound bleeds?,wound_care,Standard response for wound care.
+How should I clean my wound?,wound_care,Standard response for wound care.
+What do I do if the wound bleeds?,wound_care,Standard response for wound care.
+How should I clean my wound?,wound_care,Standard response for wound care.
+Is redness around the incision normal?,wound_care,Standard response for wound care.
+What do I do if the wound bleeds?,wound_care,Standard response for wound care.
+What do I do if the wound bleeds?,wound_care,Standard response for wound care.
+How should I clean my wound?,wound_care,Standard response for wound care.
+Is redness around the incision normal?,wound_care,Standard response for wound care.
+How should I clean my wound?,wound_care,Standard response for wound care.
+What do I do if the wound bleeds?,wound_care,Standard response for wound care.
+Is redness around the incision normal?,wound_care,Standard response for wound care.
+What do I do if the wound bleeds?,wound_care,Standard response for wound care.
+How should I clean my wound?,wound_care,Standard response for wound care.
+Is redness around the incision normal?,wound_care,Standard response for wound care.
+What do I do if the wound bleeds?,wound_care,Standard response for wound care.
+How should I clean my wound?,wound_care,Standard response for wound care.
+What do I do if the wound bleeds?,wound_care,Standard response for wound care.
+What do I do if the wound bleeds?,wound_care,Standard response for wound care.
+Is redness around the incision normal?,wound_care,Standard response for wound care.
+Is redness around the incision normal?,wound_care,Standard response for wound care.
+What do I do if the wound bleeds?,wound_care,Standard response for wound care.
+What do I do if the wound bleeds?,wound_care,Standard response for wound care.
+How should I clean my wound?,wound_care,Standard response for wound care.
+What do I do if the wound bleeds?,wound_care,Standard response for wound care.
+Is redness around the incision normal?,wound_care,Standard response for wound care.
+How should I clean my wound?,wound_care,Standard response for wound care.
+How should I clean my wound?,wound_care,Standard response for wound care.
+How should I clean my wound?,wound_care,Standard response for wound care.
+How should I clean my wound?,wound_care,Standard response for wound care.
+Is redness around the incision normal?,wound_care,Standard response for wound care.
+What do I do if the wound bleeds?,wound_care,Standard response for wound care.
+How should I clean my wound?,wound_care,Standard response for wound care.
+How should I clean my wound?,wound_care,Standard response for wound care.
+How should I clean my wound?,wound_care,Standard response for wound care.
+How should I clean my wound?,wound_care,Standard response for wound care.
+Is it normal to feel depressed after surgery?,emotional_support,Standard response for emotional support.
+Who can I talk to about how I feel?,emotional_support,Standard response for emotional support.
+Who can I talk to about how I feel?,emotional_support,Standard response for emotional support.
+Who can I talk to about how I feel?,emotional_support,Standard response for emotional support.
+Who can I talk to about how I feel?,emotional_support,Standard response for emotional support.
+Who can I talk to about how I feel?,emotional_support,Standard response for emotional support.
+I feel anxious—what should I do?,emotional_support,Standard response for emotional support.
+Who can I talk to about how I feel?,emotional_support,Standard response for emotional support.
+I feel anxious—what should I do?,emotional_support,Standard response for emotional support.
+Who can I talk to about how I feel?,emotional_support,Standard response for emotional support.
+I feel anxious—what should I do?,emotional_support,Standard response for emotional support.
+I feel anxious—what should I do?,emotional_support,Standard response for emotional support.
+Who can I talk to about how I feel?,emotional_support,Standard response for emotional support.
+Who can I talk to about how I feel?,emotional_support,Standard response for emotional support.
+Is it normal to feel depressed after surgery?,emotional_support,Standard response for emotional support.
+I feel anxious—what should I do?,emotional_support,Standard response for emotional support.
+Is it normal to feel depressed after surgery?,emotional_support,Standard response for emotional support.
+I feel anxious—what should I do?,emotional_support,Standard response for emotional support.
+Is it normal to feel depressed after surgery?,emotional_support,Standard response for emotional support.
+Is it normal to feel depressed after surgery?,emotional_support,Standard response for emotional support.
+Is it normal to feel depressed after surgery?,emotional_support,Standard response for emotional support.
+Who can I talk to about how I feel?,emotional_support,Standard response for emotional support.
+Who can I talk to about how I feel?,emotional_support,Standard response for emotional support.
+Is it normal to feel depressed after surgery?,emotional_support,Standard response for emotional support.
+I feel anxious—what should I do?,emotional_support,Standard response for emotional support.
+Who can I talk to about how I feel?,emotional_support,Standard response for emotional support.
+Is it normal to feel depressed after surgery?,emotional_support,Standard response for emotional support.
+Is it normal to feel depressed after surgery?,emotional_support,Standard response for emotional support.
+Who can I talk to about how I feel?,emotional_support,Standard response for emotional support.
+Is it normal to feel depressed after surgery?,emotional_support,Standard response for emotional support.
+Is it normal to feel depressed after surgery?,emotional_support,Standard response for emotional support.
+Is it normal to feel depressed after surgery?,emotional_support,Standard response for emotional support.
+Is it normal to feel depressed after surgery?,emotional_support,Standard response for emotional support.
+I feel anxious—what should I do?,emotional_support,Standard response for emotional support.
+Is it normal to feel depressed after surgery?,emotional_support,Standard response for emotional support.
+I feel anxious—what should I do?,emotional_support,Standard response for emotional support.
+Who can I talk to about how I feel?,emotional_support,Standard response for emotional support.
+Is it normal to feel depressed after surgery?,emotional_support,Standard response for emotional support.
+Who can I talk to about how I feel?,emotional_support,Standard response for emotional support.
+Who can I talk to about how I feel?,emotional_support,Standard response for emotional support.
+Who can I talk to about how I feel?,emotional_support,Standard response for emotional support.
+I feel anxious—what should I do?,emotional_support,Standard response for emotional support.
+I feel anxious—what should I do?,emotional_support,Standard response for emotional support.
+Who can I talk to about how I feel?,emotional_support,Standard response for emotional support.
+Is it normal to feel depressed after surgery?,emotional_support,Standard response for emotional support.
+Who can I talk to about how I feel?,emotional_support,Standard response for emotional support.
+I feel anxious—what should I do?,emotional_support,Standard response for emotional support.
+Is it normal to feel depressed after surgery?,emotional_support,Standard response for emotional support.
+Is it normal to feel depressed after surgery?,emotional_support,Standard response for emotional support.
+Is it normal to feel depressed after surgery?,emotional_support,Standard response for emotional support.
+Will I need more surgery?,follow_up,Standard response for follow up.
+When is my follow-up appointment?,follow_up,Standard response for follow up.
+When is my follow-up appointment?,follow_up,Standard response for follow up.
+Will I need more surgery?,follow_up,Standard response for follow up.
+What happens during the post-op checkup?,follow_up,Standard response for follow up.
+When is my follow-up appointment?,follow_up,Standard response for follow up.
+What happens during the post-op checkup?,follow_up,Standard response for follow up.
+When is my follow-up appointment?,follow_up,Standard response for follow up.
+When is my follow-up appointment?,follow_up,Standard response for follow up.
+What happens during the post-op checkup?,follow_up,Standard response for follow up.
+Will I need more surgery?,follow_up,Standard response for follow up.
+Will I need more surgery?,follow_up,Standard response for follow up.
+Will I need more surgery?,follow_up,Standard response for follow up.
+When is my follow-up appointment?,follow_up,Standard response for follow up.
+Will I need more surgery?,follow_up,Standard response for follow up.
+When is my follow-up appointment?,follow_up,Standard response for follow up.
+What happens during the post-op checkup?,follow_up,Standard response for follow up.
+When is my follow-up appointment?,follow_up,Standard response for follow up.
+When is my follow-up appointment?,follow_up,Standard response for follow up.
+What happens during the post-op checkup?,follow_up,Standard response for follow up.
+What happens during the post-op checkup?,follow_up,Standard response for follow up.
+What happens during the post-op checkup?,follow_up,Standard response for follow up.
+When is my follow-up appointment?,follow_up,Standard response for follow up.
+Will I need more surgery?,follow_up,Standard response for follow up.
+Will I need more surgery?,follow_up,Standard response for follow up.
+Will I need more surgery?,follow_up,Standard response for follow up.
+When is my follow-up appointment?,follow_up,Standard response for follow up.
+Will I need more surgery?,follow_up,Standard response for follow up.
+What happens during the post-op checkup?,follow_up,Standard response for follow up.
+When is my follow-up appointment?,follow_up,Standard response for follow up.
+When is my follow-up appointment?,follow_up,Standard response for follow up.
+What happens during the post-op checkup?,follow_up,Standard response for follow up.
+What happens during the post-op checkup?,follow_up,Standard response for follow up.
+What happens during the post-op checkup?,follow_up,Standard response for follow up.
+What happens during the post-op checkup?,follow_up,Standard response for follow up.
+What happens during the post-op checkup?,follow_up,Standard response for follow up.
+What happens during the post-op checkup?,follow_up,Standard response for follow up.
+What happens during the post-op checkup?,follow_up,Standard response for follow up.
+Will I need more surgery?,follow_up,Standard response for follow up.
+When is my follow-up appointment?,follow_up,Standard response for follow up.
+Will I need more surgery?,follow_up,Standard response for follow up.
+When is my follow-up appointment?,follow_up,Standard response for follow up.
+Will I need more surgery?,follow_up,Standard response for follow up.
+Will I need more surgery?,follow_up,Standard response for follow up.
+What happens during the post-op checkup?,follow_up,Standard response for follow up.
+What happens during the post-op checkup?,follow_up,Standard response for follow up.
+What happens during the post-op checkup?,follow_up,Standard response for follow up.
+Will I need more surgery?,follow_up,Standard response for follow up.
+Will I need more surgery?,follow_up,Standard response for follow up.
+Will I need more surgery?,follow_up,Standard response for follow up.
