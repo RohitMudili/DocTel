@@ -7,7 +7,6 @@ import difflib
 from dotenv import load_dotenv
 from PIL import Image, ImageTk
 import base64
-from io import BytesIO
 
 # Load environment variables and setup
 load_dotenv()
@@ -24,7 +23,7 @@ class ChatbotGUI:
         self.root.title("Post-Surgery Recovery Assistant")
         self.root.geometry("1000x800")  # Increased size to accommodate image preview
         
-        # Initialize conversation history
+        # Initialize conversation history and image handling
         self.conversation_history = []
         self.current_image = None
         self.image_path = None
@@ -40,8 +39,8 @@ class ChatbotGUI:
             'button_fg': '#ffffff',
             'clear_bg': '#ef5350',
             'text': '#333333',
-            'alert_bg': '#ffebee',  # Light red background for alerts
-            'alert_text': '#d32f2f'  # Red text for alerts
+            'alert_bg': '#ffebee',
+            'alert_text': '#d32f2f'
         }
         
         # Configure root window
@@ -68,7 +67,7 @@ class ChatbotGUI:
         )
         self.title_label.pack(pady=(0, 10))
         
-        # Chat display area with custom styling
+        # Chat display area
         self.chat_display = scrolledtext.ScrolledText(
             self.left_frame,
             wrap=tk.WORD,
@@ -100,11 +99,10 @@ class ChatbotGUI:
         )
         self.image_preview.pack(fill=tk.BOTH, expand=True)
         
-        # Input area with custom styling
+        # Input area
         self.input_frame = tk.Frame(self.left_frame, bg=self.colors['background'])
         self.input_frame.pack(fill=tk.X, pady=10)
         
-        # Input field with custom styling
         self.user_input = tk.Entry(
             self.input_frame,
             width=60,
@@ -130,7 +128,7 @@ class ChatbotGUI:
         )
         self.upload_button.pack(side=tk.LEFT, padx=5)
         
-        # Send button with custom styling
+        # Send button
         self.send_button = tk.Button(
             self.input_frame,
             text="Send",
@@ -144,7 +142,7 @@ class ChatbotGUI:
         )
         self.send_button.pack(side=tk.LEFT, padx=5)
         
-        # Clear button with custom styling
+        # Clear button
         self.clear_button = tk.Button(
             self.input_frame,
             text="Clear Chat",
@@ -171,106 +169,113 @@ class ChatbotGUI:
         )
         if file_path:
             self.image_path = file_path
-            # Display image preview
             self.display_image_preview(file_path)
-            # Add message about image upload
             self.add_message("You", "📷 Image uploaded for analysis")
 
     def display_image_preview(self, image_path):
-        # Open and resize image for preview
-        image = Image.open(image_path)
-        # Calculate aspect ratio
-        aspect_ratio = image.width / image.height
-        max_width = 300
-        max_height = 300
-        if aspect_ratio > 1:
-            new_width = min(max_width, image.width)
-            new_height = int(new_width / aspect_ratio)
-        else:
-            new_height = min(max_height, image.height)
-            new_width = int(new_height * aspect_ratio)
-        
-        image = image.resize((new_width, new_height), Image.Resampling.LANCZOS)
-        photo = ImageTk.PhotoImage(image)
-        
-        # Update preview
-        self.image_preview.configure(image=photo)
-        self.image_preview.image = photo  # Keep a reference
-        self.current_image = image
+        try:
+            # Open and resize image for preview
+            image = Image.open(image_path)
+            # Calculate aspect ratio
+            aspect_ratio = image.width / image.height
+            max_width = 300
+            max_height = 300
+            
+            if aspect_ratio > 1:
+                new_width = min(max_width, image.width)
+                new_height = int(new_width / aspect_ratio)
+            else:
+                new_height = min(max_height, image.height)
+                new_width = int(new_height * aspect_ratio)
+            
+            image = image.resize((new_width, new_height), Image.Resampling.LANCZOS)
+            photo = ImageTk.PhotoImage(image)
+            
+            # Update preview
+            self.image_preview.configure(image=photo)
+            self.image_preview.image = photo
+            self.current_image = image
+        except Exception as e:
+            self.add_message("Bot", f"Error displaying image preview: {str(e)}")
 
     def encode_image(self, image_path):
         with open(image_path, "rb") as image_file:
             return base64.b64encode(image_file.read()).decode('utf-8')
-
-    def search_local_response(self, user_input):
-        matches = difflib.get_close_matches(user_input.lower(), questions, n=1, cutoff=0.6)
-        if matches:
-            match = matches[0]
-            response = df[df['question_text'].str.lower() == match]['response_text'].values[0]
-            return response
-        return None
 
     def search_openai_response(self, user_input):
         try:
             # Add user message to conversation history
             self.conversation_history.append({"role": "user", "content": user_input})
             
-            # If there's an image, try to analyze it
+            # If there's an image, use GPT-4 Vision
             if self.image_path:
                 try:
                     base64_image = self.encode_image(self.image_path)
-                    response = client.chat.completions.create(
-                        model="gpt-4-vision-preview",
-                        messages=[
-                            {
-                                "role": "system",
-                                "content": "You are a compassionate, professional post-operative support agent specialized in helping breast cancer patients during their recovery phase. Your goal is to provide empathetic, clear, medically-informed guidance, including carefully observing images of recovery areas when shared by patients. Your responsibilities are: Offer emotional reassurance and support without making clinical judgments or definitive diagnoses. Help patients understand and monitor their recovery symptoms (pain, swelling, limited motion, emotional changes, etc.). When an image is provided, carefully review it for signs such as redness, swelling, drainage, bruising, or irregularities. If any concerning signs are observed, kindly and cautiously recommend that the patient consult their healthcare provider promptly. Gently guide patients in wound care, drain care, medication reminders, and self-care practices (nutrition, hydration, physical therapy). Provide clear explanations of what appears normal versus what could be worth medical attention — without diagnosing. Alert patients when symptoms or visual findings may require urgent medical attention (e.g., signs of infection, severe swelling, fever, excessive bleeding) and encourage them to seek professional evaluation. Provide coping strategies for emotional challenges like anxiety, sadness, or frustration. Remind patients to follow up on medical appointments, physiotherapy, or oncology checkups. Always express observations in a supportive and non-alarming tone. Important constraints: Never diagnose, prescribe medications, or suggest altering medical instructions based on images or conversation. If any uncertainty exists, advise the patient to promptly consult their surgeon or healthcare team. Always prioritize patient safety, emotional well-being, and respectful communication. Tone: Warm, supportive, patient, and encouraging. Language: Use simple, non-technical words unless the patient requests detailed medical explanations."
-                            },
-                            {
-                                "role": "user",
-                                "content": [
-                                    {
-                                        "type": "text",
-                                        "text": f"Please analyze this post-surgery image and provide observations about healing progress, any visible changes, or concerning signs that might need medical attention. User question: {user_input}"
-                                    },
-                                    {
-                                        "type": "image_url",
-                                        "image_url": {
-                                            "url": f"data:image/jpeg;base64,{base64_image}"
+                    try:
+                        response = client.chat.completions.create(
+                            model="gpt-4-vision-preview",
+                            messages=[
+                                {
+                                    "role": "system",
+                                    "content": """You are a compassionate post-operative support agent specialized in helping breast cancer patients during recovery. When analyzing images:
+                                    1) Focus on visible physical changes, swelling, or healing progress
+                                    2) Note any concerning signs that might need medical attention
+                                    3) Provide general observations without making diagnoses
+                                    4) Always encourage consulting healthcare providers for professional assessment
+                                    5) Be specific about what you observe while maintaining appropriate medical boundaries"""
+                                },
+                                {
+                                    "role": "user",
+                                    "content": [
+                                        {
+                                            "type": "text",
+                                            "text": f"Please analyze this post-surgery image and provide observations about healing progress, any visible changes, or concerning signs that might need medical attention. User question: {user_input}"
+                                        },
+                                        {
+                                            "type": "image_url",
+                                            "image_url": {
+                                                "url": f"data:image/jpeg;base64,{base64_image}"
+                                            }
                                         }
-                                    }
-                                ]
-                            }
-                        ],
-                        max_tokens=500
-                    )
-                    response_text = response.choices[0].message.content.strip()
-                    response_text += "\n\n⚠️ IMPORTANT: This is not a medical diagnosis. Please consult your healthcare provider for professional medical advice and confirmation."
+                                    ]
+                                }
+                            ],
+                            max_tokens=500
+                        )
+                        response_text = response.choices[0].message.content.strip()
+                        response_text += "\n\n⚠️ IMPORTANT: This is not a medical diagnosis. Please consult your healthcare provider for professional medical advice and confirmation."
+                    except openai.AuthenticationError:
+                        response_text = "I apologize, but there seems to be an issue with the API authentication. Please ensure you have a valid OpenAI API key with appropriate access levels configured."
+                    except openai.NotFoundError:
+                        response_text = "I apologize, but the image analysis feature is currently not available. This could be because:\n\n1. The API key doesn't have access to GPT-4 Vision capabilities\n2. The account needs to be upgraded to access vision features\n\nFor now, I can still help answer your questions without image analysis. Would you like to describe what you're seeing instead?"
+                    except Exception as e:
+                        response_text = f"I apologize, but I'm having trouble analyzing the image. This could be due to technical limitations or image format issues. For your safety, please consult your healthcare provider directly about any concerns.\n\nError details: {str(e)}"
                 except Exception as e:
-                    # If image analysis fails, provide a helpful message
-                    response_text = "I understand you've shared an image, but I'm currently unable to analyze it. For your safety and proper medical guidance, I recommend:\n\n1. Consulting your healthcare provider about any concerns\n2. Taking notes about any changes you observe\n3. Keeping track of any symptoms or changes in your recovery\n\nWould you like to discuss your recovery progress or ask any other questions about post-surgery care?"
-            
+                    response_text = f"Error processing image: {str(e)}\n\nPlease try uploading the image again or describe what you're seeing instead."
             else:
                 # Regular text conversation
                 messages = [
-                    {"role": "system", "content": "You are a compassionate, professional post-operative support agent specialized in helping breast cancer patients during their recovery phase. Your goal is to provide empathetic, clear, and medically-informed guidance. Your responsibilities are: Offer emotional reassurance and support without making clinical judgments. Help patients understand and monitor their recovery symptoms (pain, swelling, limited motion, emotional changes, etc.). Gently guide patients in wound care, drain care, medication reminders, and self-care practices (nutrition, hydration, physical therapy). Alert patients when symptoms may require urgent medical attention (e.g., signs of infection, severe swelling, fever, excessive bleeding) and advise them to contact their healthcare provider. Provide coping strategies for emotional challenges like anxiety, sadness, or frustration. Remind patients to follow up on medical appointments and therapy (e.g., physiotherapy, oncology follow-up). Adapt your tone: always be kind, respectful, non-judgmental, and calm. Important constraints: Never diagnose, prescribe medication, or suggest altering medical instructions. If a question falls outside general recovery support, encourage the patient to consult their doctor. Always prioritize patient safety and emotional well-being."}
+                    {
+                        "role": "system",
+                        "content": "You are a compassionate post-operative support agent specialized in helping breast cancer patients during recovery. Provide clear, empathetic guidance while maintaining appropriate medical boundaries."
+                    }
                 ]
                 messages.extend(self.conversation_history)
                 
                 response = client.chat.completions.create(
                     model="gpt-4",
                     messages=messages,
-                    temperature=0.5,
+                    temperature=0.7,
                     max_tokens=150
                 )
                 response_text = response.choices[0].message.content.strip()
             
             # Add assistant's response to conversation history
             self.conversation_history.append({"role": "assistant", "content": response_text})
-            
             return response_text
+            
         except Exception as e:
-            return f"I apologize, but I'm having trouble processing your request. Please try again or contact your healthcare provider for immediate assistance."
+            return f"I apologize, but I'm having trouble processing your request. Please try again or contact your healthcare provider for immediate assistance. Error: {str(e)}"
 
     def send_message(self, event=None):
         user_message = self.user_input.get()
@@ -286,15 +291,13 @@ class ChatbotGUI:
             
             self.add_message("Bot", response)
 
-    def contains_urgent_medical_alert(self, message):
-        # Keywords that indicate urgent medical attention
-        alert_keywords = [
-            'urgent', 'emergency', 'immediately', 'seek medical attention',
-            'call your doctor', 'contact your healthcare provider',
-            'seek immediate medical help', 'go to the emergency room',
-            'call 911', 'seek emergency care'
-        ]
-        return any(keyword.lower() in message.lower() for keyword in alert_keywords)
+    def search_local_response(self, user_input):
+        matches = difflib.get_close_matches(user_input.lower(), questions, n=1, cutoff=0.6)
+        if matches:
+            match = matches[0]
+            response = df[df['question_text'].str.lower() == match]['response_text'].values[0]
+            return response
+        return None
 
     def add_message(self, sender, message, is_user=False):
         self.chat_display.config(state=tk.NORMAL)
@@ -310,9 +313,7 @@ class ChatbotGUI:
             self.chat_display.insert(tk.END, f"{message}\n\n", 'user')
         else:
             self.chat_display.insert(tk.END, f"{sender}: ", 'bot')
-            # Check if message contains urgent medical alert
-            if self.contains_urgent_medical_alert(message):
-                self.chat_display.insert(tk.END, "⚠️ URGENT: ", 'alert')
+            if "⚠️" in message or "urgent" in message.lower() or "immediate" in message.lower():
                 self.chat_display.insert(tk.END, f"{message}\n\n", 'alert')
             else:
                 self.chat_display.insert(tk.END, f"{message}\n\n", 'bot')
